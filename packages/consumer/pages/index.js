@@ -13,7 +13,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          MOSHI MOSHI
+          Consumer Package
         </h1>
        </main>
     </div>
