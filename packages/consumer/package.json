@@ -1,0 +1,10 @@
+{
+  "name": "consumer",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "../../node_modules/next/dist/bin/next dev -p 3001",
+    "build": "../../node_modules/next/dist/bin/next build",
+    "start": "../../node_modules/next/dist/bin/next start"
+  }
+}

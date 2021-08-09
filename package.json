@@ -1,0 +1,27 @@
+{
+  "name": "root",
+  "private": true,
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "lerna": "^4.0.0"
+  },
+  "dependencies": {
+    "next": "11.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "scripts": {
+    "bootstrap": "yarn install; lerna bootstrap;",
+    "local:start": "lerna run --parallel dev",
+    "local:consumer": "lerna run --scope consumer --stream dev",
+    "start:admin": "lerna run --scope admin --stream start",
+    "start:consumer": "lerna run --scope consumer --stream start",
+    "local:admin": "lerna run --scope admin --stream dev",
+    "build:admin": "lerna run --scope admin build",
+    "build:consumer": "lerna run --scope consumer build",
+    "pre-deploy:consumer": "rimraf public &&  copyfiles -u 3 packages/consumer/public/* packages/consumer/public/**/* packages/consumer/public/**/**/* public",
+    "pre-deploy:admin": "rimraf public &&  copyfiles -u 3 packages/admin/public/* packages/admin/public/**/* packages/admin/public/**/**/* public",
+    "build:aws:consumer": "rimraf build && yarn run build:consumer && yarn run pre-deploy:consumer",
+    "build:aws:admin": "rimraf build && yarn run build:admin && yarn run pre-deploy:admin"
+  }
+}
