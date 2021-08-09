@@ -4,8 +4,8 @@
   "private": true,
   "engines": {"node": "14.x"},
   "scripts": {
-    "dev": "../../node_modules/next/dist/bin/next dev -p 3000",
-    "build": "../../node_modules/next/dist/bin/next build",
-    "start": "../../node_modules/next/dist/bin/next start"
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start"
   }
 }
