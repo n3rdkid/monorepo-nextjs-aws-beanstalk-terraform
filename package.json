@@ -12,6 +12,7 @@
   },
   "scripts": {
     "bootstrap": "yarn install; lerna bootstrap;",
+    "start": "node_modules/next/dist/bin/next start",
     "local:start": "lerna run --parallel dev",
     "local:consumer": "lerna run --scope consumer --stream dev",
     "start:admin": "lerna run --scope admin --stream start",
