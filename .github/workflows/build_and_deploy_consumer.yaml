@@ -120,6 +120,6 @@ jobs:
           aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
           application_name: ${{ secrets.APPLICATION_NAME }}
           environment_name: ${{ secrets.CONSUMER_BEANSTALK_ENVIRONMENT_NAME }}
-          version_label: "test-one-${{ steps.format-time.outputs.replaced }}"
+          version_label: "consumer-${{ steps.format-time.outputs.replaced }}"
           region: ${{ secrets.REGION }}
           deployment_package: deploy.zip
