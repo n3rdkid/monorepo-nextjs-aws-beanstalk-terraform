@@ -2,7 +2,6 @@ module "beanstalk_app_project" {
     source = "./modules/beanstalk_application"
     aws_elastic_beanstalk_application_name=var.aws_elastic_beanstalk_application_name
     aws_elastic_beanstalk_application_description= var.aws_elastic_beanstalk_application_description
-    beanstalk_application_service_role=var.beanstalk_application_service_role
 }
 
 module "beanstalk_environment_consumer_dev" {
