@@ -5,13 +5,17 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
   const API_URL=process.env.NEXT_PUBLIC_API_URI
+  const instance = axios.create({
+
+    baseURL: API_URL
+  });
   const [users, setUsers] = useState([])
   useEffect(() => {
     getUsers();
   }, []);
   const getUsers=async ()=>{
     try{
-    const {data}=await axios.get(`${API_URL}/api/user`,{
+    const {data}=await instance.get(`/api/user`,{
       'Content-Type': 'application/x-www-form-urlencoded',
     })
     console.log("DATA",data)

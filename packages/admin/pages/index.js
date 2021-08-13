@@ -8,9 +8,12 @@ export default function Home() {
   const API_URL=process.env.NEXT_PUBLIC_API_URI
   const [form,setForm]=useState()
   const addUser=async ()=>{
-    console.log("FORM ",form)
+    const instance = axios.create({
+
+      baseURL: API_URL
+    });
     try{
-    await axios.post(`${API_URL}/api/user`,form,{
+    await instance.post(`/api/user`,form,{
       'Content-Type': 'application/x-www-form-urlencoded',
     })
     }
