@@ -1,8 +1,24 @@
+import axios from 'axios'
 import Head from 'next/head'
 import Image from 'next/image'
+import { useState } from 'react'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+  const API_URL=process.env.NEXT_PUBLIC_API_URI
+  const [form,setForm]=useState()
+  const addUser=async ()=>{
+    console.log("FORM ",form)
+    try{
+    await axios.post(`${API_URL}/api/user`,form,{
+      'Content-Type': 'application/x-www-form-urlencoded',
+    })
+    }
+    catch(e){
+        console.log(e)
+
+    }
+  }
   return (
     <div className={styles.container}>
       <Head>
@@ -15,6 +31,20 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to Admin App!!!
         </h1>
+        <div style={{display:'flex',flexDirection:'column',gap:10}}>
+       <div> First name <input type="text" onChange={e=>{
+          setForm(previous=>({...previous,first_name:e.target.value}))
+        }}/>
+        </div>
+        <div>Last name <input type="text" onChange={e=>{
+          setForm(previous=>({...previous,last_name:e.target.value}))
+        }}/>
+        </div>
+        <button onClick={()=>{
+          addUser()
+        }}>Add User</button>
+        </div>
+        <br/>
        </main>
     </div>
   )

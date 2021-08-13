@@ -5,3 +5,5 @@
 **/.terraform.lock.hcl
 **/variables.tf
 .next
+.env
+**/.DS_store

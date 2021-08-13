@@ -60,7 +60,7 @@ jobs:
 
       - name: Creating & Initializing env variables 
         run: |
-          echo "ENV_VARIABLES" > .env
+          echo "NEXT_PUBLIC_API_URI=${{ secrets.NEXT_PUBLIC_API_URI }}" > .env
 
       - name : Check for package changes (if tag push)
         id: tag_test
