@@ -8,3 +8,5 @@ Test 28 - Testing With PROD DEP only expect
     "@types/node": "^16.7.1",
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
+
+    removed     "react-scripts": "4.0.3",
