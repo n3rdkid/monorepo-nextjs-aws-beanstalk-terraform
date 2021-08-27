@@ -1,1 +1,1 @@
-Test 28 - Testing With full list of dependencies FAILED  :'(
+Test 28 - Testing With PROD DEP only

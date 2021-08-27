@@ -36,8 +36,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title} style={{textAlign:"center"}}>
-          Consumer Package
-        </h1>
+          PROD IS NOT THE PROB        </h1>
         <div style={{display:"flex"}}>
           <ul>
           {users?.map(user=>{
