@@ -2,7 +2,7 @@
 Deploying NextJS MonoRepo to AWS Beanstalk (Created using Terrform) using Github Actions  
 
 
-- Create `/infra/variables.tf` or provide input variables using other ways.
+- Create `/infra/variables.tf` or provide input variables using other ways. [This has been improved in newer pattern we make use od .tfvars]
 - Run `terraform init`
 - Run `terraform plan`
 - Run `terraform apply`
